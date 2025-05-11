@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  facebook-screenshot:
+    build: .
+    container_name: facebook-screenshot
+    volumes:
+      - ./screenshots:/app/screenshots
+    environment:
+      - FB_EMAIL=${FB_EMAIL:-""}
+      - FB_PASSWORD=${FB_PASSWORD:-""}
+      - USE_LOGIN=${USE_LOGIN:-"false"}
+    restart: unless-stopped 

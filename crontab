@@ -1,0 +1,4 @@
+# Run the screenshot script once a day at 8:00 AM
+0 8 * * * cd /app && python /app/facebook_screenshot.py >> /app/screenshots/cron.log 2>&1
+
+# An empty line is required at the end of this file for a valid cron file 
